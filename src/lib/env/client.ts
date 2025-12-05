@@ -1,5 +1,5 @@
+import { StandardSchemaV1 } from '@t3-oss/env-core';
 import { createEnv } from '@t3-oss/env-nextjs';
-import { ZodError } from 'zod';
 
 export const env = createEnv({
   /**
@@ -23,11 +23,14 @@ export const env = createEnv({
   emptyStringAsUndefined: true,
 
   // Called when the schema validation fails.
-  onValidationError: (error: ZodError) => {
-    console.error(
-      '❌ Invalid environment variables:',
-      error.flatten().fieldErrors
+  onValidationError: (issues: ReadonlyArray<StandardSchemaV1.Issue>) => {
+    console.error('❌ Invalid environment variables:', issues);
+    throw new Error('Invalid environment variables');
+  },
+  // Called when server variables are accessed on the client.
+  onInvalidAccess: (variable: string) => {
+    throw new Error(
+      `❌ Attempted to access a server-side environment variable (${variable}) on the client`
     );
-    process.exit(1);
   },
 });

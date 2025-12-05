@@ -8,9 +8,7 @@
   "endOfLine": "lf",
   "arrowParens": "always",
   "trailingComma": "es5",
-  "plugins": [
-    "@trivago/prettier-plugin-sort-imports"
-  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
     "^(react|next?/?([a-zA-Z/]*))$",
     "<BUILTIN_MODULES>",

@@ -1,16 +1,10 @@
 {
-  "extends": [
-    "config:recommended"
-  ],
-  "labels": [
-    "type: dependencies"
-  ],
+  "extends": ["config:recommended"],
+  "labels": ["type: dependencies"],
   "minimumReleaseAge": "3 days",
   "packageRules": [
     {
-      "matchPackageNames": [
-        "node"
-      ],
+      "matchPackageNames": ["node"],
       "enabled": false
     }
   ],
