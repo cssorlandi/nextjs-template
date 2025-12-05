@@ -1,5 +1,7 @@
 import type { NextConfig } from 'next';
 
+import path from 'path';
+
 import './src/lib/env/client';
 import './src/lib/env/server';
 
@@ -48,10 +50,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  experimental: {
-    typedRoutes: true,
-  },
+  typedRoutes: true,
   poweredByHeader: false,
+  turbopack: {
+    root: path.join(__dirname, '..'),
+  },
   async headers() {
     return [
       {
