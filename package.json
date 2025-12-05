@@ -44,7 +44,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.5.6",
+    "eslint-config-next": "16.0.6",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-check-file": "^2.8.0",
     "eslint-plugin-n": "^17.15.1",
