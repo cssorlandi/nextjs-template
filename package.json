@@ -31,7 +31,7 @@
   "dependencies": {
     "@t3-oss/env-core": "0.13.8",
     "@t3-oss/env-nextjs": "^0.13.0",
-    "next": "16.0.7",
+    "next": "16.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zod": "^4.0.0"
@@ -45,7 +45,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.0.7",
+    "eslint-config-next": "16.1.2",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-check-file": "^3.0.0",
     "eslint-plugin-n": "^17.15.1",
